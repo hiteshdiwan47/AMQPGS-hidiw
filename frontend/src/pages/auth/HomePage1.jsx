@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../styles/home1.css";
-
+import API_URL from "../../api";
 import logo from "../../assets/logo-footer.png";
 import paperImg from "../../assets/paper.png";
 
