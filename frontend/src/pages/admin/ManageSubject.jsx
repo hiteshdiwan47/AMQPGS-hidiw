@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../../styles/manageSubject.css";
+import "../../styles/ManageSubject.css";
 
 export default function ManageSubject() {
 

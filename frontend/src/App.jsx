@@ -40,6 +40,8 @@ import "./styles/teachertopbar.css";
 import "./styles/admintopbar.css";
 import "./styles/subjectpage.css";
 import "./styles/manageQuestions.css";
+
+import "./styles/manageSubject.css";
 import "./styles/layout.css";
 import "./styles/adminlayout.css";
 import "./styles/ForgotPassword.css";
