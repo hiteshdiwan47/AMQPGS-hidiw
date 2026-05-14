@@ -1,0 +1,310 @@
+/* =========================
+   GLOBAL THEME
+========================= */
+
+/* 🌞 LIGHT MODE */
+body.light{
+  background: #f4f7fb;
+  color: #111827;
+  transition: 0.3s ease;
+}
+
+/* 🌙 DARK MODE */
+body.dark{
+  background: #0f172a;
+  color: #f8fafc;
+  transition: 0.3s ease;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+.theme-btn{
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+body.light .theme-btn{
+  background: #111827;
+  color: white;
+}
+
+body.dark .theme-btn{
+  background: #facc15;
+  color: black;
+}
+
+.theme-btn:hover{
+  transform: scale(1.05);
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card{
+  padding: 20px;
+  border-radius: 18px;
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+body.light .card{
+  background: white;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+body.dark .card{
+  background: #1e293b;
+  box-shadow: 0 5px 18px rgba(255,255,255,0.04);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  width: 100%;
+  padding: 15px 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.light .navbar{
+  background: white;
+}
+
+body.dark .navbar{
+  background: #111827;
+}
+
+/* =========================
+   TEACHER TOPBAR
+========================= */
+
+.teacher-top-bar{
+
+  width: calc(100% - 250px);
+  height: 80px;
+width: 99%;
+ margin-left: 10px;
+
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    135deg,
+    #1e293b,
+    #0f172a
+  );
+
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.top-left{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-left img{
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+}
+
+.top-left img:hover{
+  transform: scale(1.05);
+}
+
+/* =========================
+   CENTER TITLE
+========================= */
+
+.project-title{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.top-right{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* =========================
+   ICON BUTTONS
+========================= */
+
+.icon-btn{
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.icon-btn:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile{
+  position: relative;
+}
+
+/* PROFILE BOX */
+
+.profile-box{
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 14px;
+
+  border-radius: 25px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.profile-box:hover{
+  background: rgba(255,255,255,0.12);
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown{
+
+  position: absolute;
+
+  top: 60px;
+  right: 0;
+
+  width: 220px;
+
+  background: white;
+  color: #111827;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  animation: fadeIn 0.25s ease;
+}
+
+/* =========================
+   DROPDOWN ITEMS
+========================= */
+
+.dropdown-item{
+
+  padding: 14px 16px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.dropdown-item:hover{
+  background: #f1f5f9;
+}
+
+/* LOGOUT */
+
+.dropdown-item.logout{
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn{
+
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .teacher-top-bar{
+
+    width: 100%;
+    margin-left: 0;
+
+    padding: 0 15px;
+  }
+
+  .project-title{
+    font-size: 15px;
+  }
+
+  .top-left img{
+    width: 45px;
+    height: 45px;
+  }
+
+  .dropdown{
+    width: 190px;
+  }
+
+}

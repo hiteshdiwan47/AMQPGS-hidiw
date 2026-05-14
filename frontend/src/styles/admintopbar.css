@@ -1,0 +1,216 @@
+/* ===== TOPBAR ===== */
+
+/* 🌞 LIGHT THEME */
+body.light{
+  background: #f4f7fb;
+  color: #111;
+  transition: 0.3s ease;
+}
+
+/* 🌙 DARK THEME */
+body.dark{
+  background: #121212;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* THEME TOGGLE BUTTON */
+.theme-btn{
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+/* LIGHT BUTTON */
+body.light .theme-btn{
+  background: #222;
+  color: white;
+}
+
+/* DARK BUTTON */
+body.dark .theme-btn{
+  background: #ffd43b;
+  color: black;
+}
+
+/* HOVER EFFECT */
+.theme-btn:hover{
+  transform: scale(1.05);
+}
+
+/* CARD EXAMPLE */
+.card{
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+body.light .card{
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.dark .card{
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+/* NAVBAR */
+.navbar{
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.light .navbar{
+  background: #ffffff;
+}
+
+body.dark .navbar{
+  background: #1b1b1b;
+}
+
+/* ===== ADMIN TOP BAR ===== */
+
+.admin-top-bar{
+
+
+  height: 70px;
+width: 100%;
+
+
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* LEFT */
+.top-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+}
+
+.top-left img{
+  width: 80px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.top-left img:hover{
+  transform: scale(1.05);
+}
+
+/* CENTER */
+.project-title{
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* RIGHT */
+.top-right{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ICON BUTTON */
+.icon-btn{
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon-btn:hover{
+  background: rgba(255,255,255,0.15);
+}
+
+/* PROFILE */
+.profile{
+  position: relative;
+}
+
+/* PROFILE BOX */
+.profile-box{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-box:hover{
+  background: rgba(255,255,255,0.15);
+}
+
+/* DROPDOWN */
+.dropdown{
+  position: absolute;
+  right: 0;
+  top: 55px;
+
+  width: 210px;
+  background: white;
+  color: black;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* ITEMS */
+.dropdown-item{
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-item:hover{
+  background: #f1f5f9;
+}
+
+/* LOGOUT */
+.dropdown-item.logout{
+  color: red;
+  font-weight: 600;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

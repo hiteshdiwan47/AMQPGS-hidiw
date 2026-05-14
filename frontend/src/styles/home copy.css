@@ -1,0 +1,414 @@
+/* ================= TOP BAR ================= */
+.first {
+  background: #0a1f89;
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+/* LEFT TEXT */
+.first div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CENTER ARROW */
+.intraction {
+  font-size: 18px;
+  animation: move 1s infinite alternate;
+}
+
+/* RIGHT TEXT */
+.blink {
+  color: #ff9800;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(8px); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ================= TOP NAV ================= */
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+  padding: 12px 20px;
+
+  background: #02d267;
+  flex-wrap: wrap;
+}
+
+/* NAV ITEMS */
+.topnav span,
+.topnav a,
+.topnav h4 {
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.topnav span:hover,
+.topnav a:hover,
+.topnav h4:hover {
+  color: #0a1f89;
+}
+
+/* ================= DROPDOWN ================= */
+.nav-box {
+  position: relative;
+}
+
+/* DROPDOWN BOX */
+.dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+
+  background: white;
+  min-width: 180px;
+
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* ITEMS */
+.dropdown div {
+  padding: 10px 12px;
+  transition: 0.2s;
+}
+
+.dropdown div:hover {
+  background: #f3f4f6;
+  padding-left: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .intraction {
+    order: 3;
+  }
+
+  .blink {
+    order: 2;
+  }
+
+  .topnav {
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+}
+
+/* LOGO SECTION */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 65px;
+}
+
+.logo-text {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* RIGHT ICONS */
+.logo-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.logo-icons img {
+  height: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.logo-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 12px 20px;
+  background: #51648b;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-box {
+  position: relative;
+}
+
+.nav-box h4 {
+  margin: 0;
+  cursor: pointer;
+  color: white;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.dropdown div,
+.dropdown a {
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown div:hover,
+.dropdown a:hover {
+  background: #f3f4f6;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+}
+
+/* ARROWS */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* ================= FOOTER ================= */
+.footer {
+  background: linear-gradient(135deg, #0a1f89, #162d9c);
+  color: #ffffff;
+  padding: 50px 25px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* GRID (7 COLUMN EXACT MATCH) */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr 1fr 1fr 1.5fr 1.5fr;
+  gap: 25px;
+}
+
+/* COLUMN */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADINGS */
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  border-left: 4px solid #02d267;
+  padding-left: 8px;
+}
+
+/* TEXT */
+.footer-col p,
+.footer-col a {
+  font-size: 14px;
+  color: #d1d5db;
+  margin: 6px 0;
+  text-decoration: none;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.footer-col p:hover,
+.footer-col a:hover {
+  color: #02d267;
+  transform: translateX(4px);
+  cursor: pointer;
+}
+
+/* ABOUT TEXT */
+.footer-col:first-child p {
+  text-align: justify;
+}
+
+/* MAP */
+.map {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+  display: flex;
+  margin-top: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter button {
+  padding: 10px 15px;
+  border: none;
+  background: #02d267;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #01b85a;
+}
+
+/* ================= FOOTER BOTTOM ================= */
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* COPYRIGHT */
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+  transition: 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* ================= DEVELOPER ================= */
+.developer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.developer strong {
+  color: #02d267;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

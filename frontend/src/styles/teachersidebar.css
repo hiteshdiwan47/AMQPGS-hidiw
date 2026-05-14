@@ -1,0 +1,159 @@
+/* ===== SIDEBAR BASE ===== */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 30px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+/* ===== LOGO ===== */
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== LINKS ===== */
+.side-link {
+  display: block;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #cbd5f5;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.side-link:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(6px);
+  color: #fff;
+}
+
+/* ACTIVE LINK */
+.side-link.active {
+  background: linear-gradient(90deg, #2563eb, #6366f1);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== HEADINGS ===== */
+.sidebar h4 {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.sidebar h4:hover {
+  color: #fff;
+}
+
+/* ===== SUBMENU ===== */
+.submenu {
+  margin-left: 10px;
+  margin-top: 8px;
+  animation: slideDown 0.4s ease;
+}
+
+/* SUB ITEMS */
+.sub-item {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 4px 0;
+  background: rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.sub-item:hover {
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  transform: translateX(5px);
+  color: #fff;
+}
+
+/* ===== LOGOUT SPECIAL ===== */
+.logout {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.logout:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* ===== BOTTOM SECTION ===== */
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SCROLL ===== */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+body.dark .sidebar {
+  background: linear-gradient(180deg, #020617, #0f172a);
+}
+
+body.dark .side-link {
+  color: #94a3b8;
+}
+
+body.dark .side-link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .side-link {
+    font-size: 13px;
+  }
+
+  .sidebar .logo {
+    font-size: 18px;
+  }
+}

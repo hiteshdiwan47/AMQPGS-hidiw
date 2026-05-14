@@ -1,0 +1,156 @@
+/* 🌐 Page Layout */
+.admin-page {
+  padding: 30px;
+  background: #f4f7fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🏷️ Title */
+.page-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+/* 📦 Form Box */
+.form-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ✍️ Inputs */
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-box input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52,152,219,0.3);
+}
+
+/* 🔘 Buttons Row */
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* 🔵 Primary Button */
+.btn-primary {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2980b9;
+}
+
+/* ⚪ Secondary Button */
+.btn-secondary {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #bdc3c7;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #95a5a6;
+}
+
+/* 📊 Table Box */
+.table-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 📋 Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #3498db;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* 🔽 Row Border */
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* 🖱️ Hover Effect */
+tbody tr:hover {
+  background: #f2f9ff;
+}
+
+/* ⚙️ Actions */
+.actions {
+  text-align: center;
+}
+
+/* ✏️ Edit Button */
+.actions button {
+  margin: 0 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actions button:first-child {
+  background: #f1c40f;
+  color: #000;
+}
+
+.actions button:first-child:hover {
+  background: #d4ac0d;
+}
+
+/* ❌ Delete Button */
+.actions button:last-child {
+  background: #e74c3c;
+  color: white;
+}
+
+.actions button:last-child:hover {
+  background: #c0392b;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .form-box {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+}

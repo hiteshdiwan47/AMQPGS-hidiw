@@ -1,0 +1,92 @@
+.layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.box {
+  background: #f1f5f9;
+  padding: 10px;
+  margin: 10px 0;
+}
+.form input {
+  margin: 5px;
+  padding: 8px;
+}
+
+.form button {
+  padding: 8px 15px;
+  background: blue;
+  color: white;
+}
+
+button {
+  margin: 5px;
+  padding: 6px 10px;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #1e293b;
+}
+
+/* DROPDOWN */
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: #1e293b;
+}
+
+.dropdown a {
+  display: block;
+  padding: 8px 20px;
+  color: #cbd5f5;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: #334155;
+}
+
+/* OPEN ANIMATION */
+.dropdown.show {
+  max-height: 200px;
+}

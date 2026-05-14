@@ -1,0 +1,60 @@
+/* ===== adminsidebar ===== */
+.adminsidebar {
+  width: 250px;
+  background: #1e293b;
+  color: #fff;
+  height: 100vh;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+/* LOGO */
+.adminsidebar .logo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* LINKS */
+.adminsidebar .side-link {
+  display: block;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+.adminsidebar .side-link:hover {
+  background: #334155;
+}
+
+/* ACTIVE LINK */
+.adminsidebar .side-link.active {
+  background: #02d267;
+  color: #000;
+}
+
+/* HEADINGS */
+.adminsidebar h4 {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+/* SUBMENU */
+.adminsidebar .submenu {
+  padding-left: 10px;
+}
+
+.adminsidebar .sub-item {
+  font-size: 13px;
+}
+
+/* LOGOUT */
+.adminsidebar .logout {
+  color: #ef4444;
+}
