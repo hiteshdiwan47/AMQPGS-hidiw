@@ -31,7 +31,7 @@ export default function TeacherSidebar() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:5000/api/subject")
+      .get("${API_URL}/api/subject")
       .then((res) => setSubjects(res.data))
       .catch((err) => console.log(err));
 

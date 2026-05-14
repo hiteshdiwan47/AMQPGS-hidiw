@@ -32,7 +32,7 @@ export default function SubjectPage() {
   useEffect(() => {
     const fetchSubject = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/subject/${id}`);
+        const res = await axios.get(`${API_URL}/api/subject/${id}`);
         console.log("SUBJECT:", res.data); // 🔍 debug
         setSubject(res.data);
       } catch (err) {
@@ -85,7 +85,7 @@ export default function SubjectPage() {
       const classId = subject?.classId?._id;
 
       const res = await axios.post(
-        `http://localhost:5000/api/generate/${id}`,
+        `${API_URL}/api/generate/${id}`,
         {
           teacherId,
           subjectId: id, // ✅ correct

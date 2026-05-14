@@ -10,7 +10,7 @@ export default function AdminReports() {
   const [previewType, setPreviewType] = useState(null); // pdf / csv / excel
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/report")
+    axios.get("${API_URL}/api/report")
       .then(res => setReports(res.data))
       .catch(err => console.log(err));
   }, []);
@@ -89,14 +89,14 @@ export default function AdminReports() {
 
                 {/* 🔥 PDF VIEW */}
                 <iframe
-                  src={`http://localhost:5000/api/report/pdf/${selectedReport._id}`}
+                  src={`${API_URL}/api/report/pdf/${selectedReport._id}`}
                   width="100%"
                   height="300px"
                 />
 
                 <button
                   onClick={() =>
-                    window.open(`http://localhost:5000/api/report/pdf/${selectedReport._id}`)
+                    window.open(`${API_URL}/api/report/pdf/${selectedReport._id}`)
                   }
                 >
                   ⬇ Download PDF
@@ -110,14 +110,14 @@ export default function AdminReports() {
                 <h3>📊 CSV Preview</h3>
 
                 <iframe
-                  src="http://localhost:5000/api/report/export/csv"
+                  src="${API_URL}/api/report/export/csv"
                   width="100%"
                   height="300px"
                 />
 
                 <button
                   onClick={() =>
-                    window.open("http://localhost:5000/api/report/export/csv")
+                    window.open("${API_URL}/api/report/export/csv")
                   }
                 >
                   ⬇ Download CSV
@@ -131,14 +131,14 @@ export default function AdminReports() {
                 <h3>📊 Excel Preview</h3>
 
                 <iframe
-                  src="http://localhost:5000/api/report/export/excel"
+                  src="${API_URL}/api/report/export/excel"
                   width="100%"
                   height="300px"
                 />
 
                 <button
                   onClick={() =>
-                    window.open("http://localhost:5000/api/report/export/excel")
+                    window.open("${API_URL}/api/report/export/excel")
                   }
                 >
                   ⬇ Download Excel

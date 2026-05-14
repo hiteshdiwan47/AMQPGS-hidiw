@@ -24,7 +24,7 @@ export default function Classes() {
   const fetchC = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/class");
+      const res = await axios.get("${API_URL}/api/class");
       setClasses(res.data);
     } catch (err) {
       console.log(err);
@@ -52,12 +52,12 @@ export default function Classes() {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:5000/api/class/${editId}`,
+          `${API_URL}/api/class/${editId}`,
           form
         );
       } else {
         await axios.post(
-          "http://localhost:5000/api/class",
+          "${API_URL}/api/class",
           form
         );
       }
@@ -84,7 +84,7 @@ export default function Classes() {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete class?")) return;
 
-    await axios.delete(`http://localhost:5000/api/class/${id}`);
+    await axios.delete(`${API_URL}/api/class/${id}`);
     fetchC();
   };
 

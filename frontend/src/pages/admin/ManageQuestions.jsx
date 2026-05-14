@@ -34,8 +34,8 @@ export default function ManageQuestions() {
     setLoading(true);
     try {
       const [qRes, sRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/question"),
-        axios.get("http://localhost:5000/api/subject")
+        axios.get("${API_URL}/api/question"),
+        axios.get("${API_URL}/api/subject")
       ]);
 
       setQuestions(qRes.data);
@@ -126,9 +126,9 @@ export default function ManageQuestions() {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/question/${editId}`, payload);
+        await axios.put(`${API_URL}/api/question/${editId}`, payload);
       } else {
-        await axios.post("http://localhost:5000/api/question", payload);
+        await axios.post("${API_URL}/api/question", payload);
       }
 
       resetForm();
@@ -161,7 +161,7 @@ const editQuestion = (q) => {
 
   // ================= DELETE =================
   const deleteQuestion = async (id) => {
-    await axios.delete(`http://localhost:5000/api/question/${id}`);
+    await axios.delete(`${API_URL}/api/question/${id}`);
     fetchData();
   };
 

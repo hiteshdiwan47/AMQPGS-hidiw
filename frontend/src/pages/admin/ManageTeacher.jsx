@@ -18,7 +18,7 @@ export default function Teachers() {
   const fetchTeachers = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/teacher");
+      const res = await axios.get("${API_URL}/api/teacher");
       setTeachers(res.data);
     } catch (err) {
       console.error("Fetch error:", err);
@@ -36,13 +36,13 @@ export default function Teachers() {
 
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/teacher/${editId}`, {
+        await axios.put(`${API_URL}/api/teacher/${editId}`, {
           name,
           email,
           password
         });
       } else {
-        await axios.post("http://localhost:5000/api/teacher", {
+        await axios.post("${API_URL}/api/teacher", {
           name,
           email,
           password,
@@ -70,7 +70,7 @@ export default function Teachers() {
     if (!window.confirm("Are you sure to delete this teacher?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/teacher/${id}`);
+      await axios.delete(`${API_URL}/api/teacher/${id}`);
       fetchTeachers();
     } catch (err) {
       console.error("Delete error:", err);

@@ -59,10 +59,10 @@ export default function AdminSidebar() {
     const fetchCounts = async () => {
       try {
         const [t, s, q, c] = await Promise.all([
-          axios.get("http://localhost:5000/api/teacher"),
-          axios.get("http://localhost:5000/api/subject"),
-          axios.get("http://localhost:5000/api/question"), // ✅ FIXED
-          axios.get("http://localhost:5000/api/class"),
+          axios.get("${API_URL}/api/teacher"),
+          axios.get("${API_URL}/api/subject"),
+          axios.get("${API_URL}/api/question"), // ✅ FIXED
+          axios.get("${API_URL}/api/class"),
         ]);
 
         setCounts({

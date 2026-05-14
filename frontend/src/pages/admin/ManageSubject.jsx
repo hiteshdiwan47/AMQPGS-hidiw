@@ -22,7 +22,7 @@ export default function ManageSubject() {
   }, []);
 
   const fetchSubjects = async () => {
-    const res = await axios.get("http://localhost:5000/api/subject");
+    const res = await axios.get("${API_URL}/api/subject");
     setSubjects(res.data);
   };
 
@@ -46,7 +46,7 @@ export default function ManageSubject() {
     try {
       if (editId) {
         await axios.put(
-          `http://localhost:5000/api/subject/${editId}`,
+          `${API_URL}/api/subject/${editId}`,
           {
             ...form,
             semester: Number(semester)
@@ -54,7 +54,7 @@ export default function ManageSubject() {
         );
       } else {
         await axios.post(
-          "http://localhost:5000/api/subject",
+          "${API_URL}/api/subject",
           {
             ...form,
             semester: Number(semester)
@@ -88,7 +88,7 @@ export default function ManageSubject() {
   const handleDelete = async (id) => {
     if (!window.confirm("Delete subject?")) return;
 
-    await axios.delete(`http://localhost:5000/api/subject/${id}`);
+    await axios.delete(`${API_URL}/api/subject/${id}`);
     fetchSubjects();
   };
 

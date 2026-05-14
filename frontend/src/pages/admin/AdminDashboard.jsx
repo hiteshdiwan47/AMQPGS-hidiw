@@ -29,7 +29,7 @@ export default function AdminDashboard() {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/admin/analytics?filter=${filter}`
+        `${API_URL}/api/admin/analytics?filter=${filter}`
       );
 
       setCounts(res.data.counts || {});

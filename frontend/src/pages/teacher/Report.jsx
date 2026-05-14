@@ -39,7 +39,7 @@ export default function Report() {
   }, []);
 
   const fetchReports = async () => {
-    const res = await axios.get("http://localhost:5000/api/report");
+    const res = await axios.get("${API_URL}/api/report");
 
     const myReports = res.data.filter(
       r => r.teacherId?._id === teacherId
@@ -94,7 +94,7 @@ export default function Report() {
 
   // 👀 PREVIEW
   const handlePreview = (id) => {
-    setPreviewUrl(`http://localhost:5000/api/report/pdf/${id}`);
+    setPreviewUrl(`${API_URL}/api/report/pdf/${id}`);
   };
 
   return (

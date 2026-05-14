@@ -19,14 +19,14 @@ export default function TeacherDashboard() {
   useEffect(() => {
 
     // 📚 SUBJECTS
-    axios.get("http://localhost:5000/api/subject")
+    axios.get("${API_URL}/api/subject")
       .then(res => {
         setSubjects(res.data);
         setStats(prev => ({ ...prev, subjects: res.data.length }));
       });
 
     // 📊 REPORTS
-    axios.get("http://localhost:5000/api/report")
+    axios.get("${API_URL}/api/report")
       .then(res => {
         setReports(res.data);
         setStats(prev => ({ ...prev, downloads: res.data.length }));
@@ -48,7 +48,7 @@ export default function TeacherDashboard() {
       });
 
     // 👨‍🏫 TEACHERS
-    axios.get("http://localhost:5000/api/teacher")
+    axios.get("${API_URL}/api/teacher")
       .then(res => {
         setStats(prev => ({ ...prev, teachers: res.data.length }));
       });
