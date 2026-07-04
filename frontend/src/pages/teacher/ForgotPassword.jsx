@@ -12,7 +12,7 @@ export default function ForgotPassword() {
 
     try {
 const res= await axios.post(
-  "${API_URL}/api/auth/forgot-password",
+  `${API_URL}/api/auth/forgot-password`,
   { email }
 );
 

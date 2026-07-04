@@ -10,7 +10,18 @@ export default function AdminSidebar() {
   const [showSettings, setShowSettings] = useState(false);
   const [dark, setDark] = useState(false);
   const [adminName, setAdminName] = useState("");
-  useEffect(() => {
+ 
+const [counts, setCounts] = useState({
+    teachers: 0,
+    subjects: 0,
+    questions: 0,
+    classes: 0
+  });
+
+
+
+  const navigate = useNavigate();
+   useEffect(() => {
 
   const user = JSON.parse(
     localStorage.getItem("user")
@@ -21,15 +32,6 @@ export default function AdminSidebar() {
   }
 
 }, []);
-
-  const [counts, setCounts] = useState({
-    teachers: 0,
-    subjects: 0,
-    questions: 0,
-    classes: 0
-  });
-
-  const navigate = useNavigate();
 
   // 🔁 MENU TOGGLE
   const toggleMenu = (menu) => {

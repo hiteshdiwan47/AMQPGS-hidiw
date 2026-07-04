@@ -4,6 +4,7 @@ import DashboardChart from "../../components/DashboardChart";
 import SubjectCard from "../../components/SubjectCard";
 import "../../styles/main.css";
 import TeacherTopbar from "../../components/TeacherTopbar";
+import API_URL from "../../api";
 export default function TeacherDashboard() {
 
   const [subjects, setSubjects] = useState([]);
@@ -19,14 +20,14 @@ export default function TeacherDashboard() {
   useEffect(() => {
 
     // 📚 SUBJECTS
-    axios.get("${API_URL}/api/subject")
+    axios.get(`${API_URL}/api/subject`)
       .then(res => {
         setSubjects(res.data);
         setStats(prev => ({ ...prev, subjects: res.data.length }));
       });
 
     // 📊 REPORTS
-    axios.get("${API_URL}/api/report")
+    axios.get(`${API_URL}/api/report`)
       .then(res => {
         setReports(res.data);
         setStats(prev => ({ ...prev, downloads: res.data.length }));
@@ -48,7 +49,7 @@ export default function TeacherDashboard() {
       });
 
     // 👨‍🏫 TEACHERS
-    axios.get("${API_URL}/api/teacher")
+    axios.get(`${API_URL}/api/teacher`)
       .then(res => {
         setStats(prev => ({ ...prev, teachers: res.data.length }));
       });

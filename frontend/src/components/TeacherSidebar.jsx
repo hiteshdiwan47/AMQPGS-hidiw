@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
  import "../styles/teachersidebar.css";
 import { toggleTheme } from "../utils/theme";
+import API_URL from "../api";
 
 export default function TeacherSidebar() {
 
@@ -31,7 +32,7 @@ export default function TeacherSidebar() {
   useEffect(() => {
 
     axios
-      .get("${API_URL}/api/subject")
+      .get(`${API_URL}/api/subject`)
       .then((res) => setSubjects(res.data))
       .catch((err) => console.log(err));
 

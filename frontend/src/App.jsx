@@ -23,6 +23,7 @@ import HomePage from "./pages/auth/HomePage";
 
 import TeacherLayout from "./components/TeacherLayout";
 import AdminLayout from "./components/AdminLayout";
+import api from "./api";
 
 import { initTheme } from "./utils/theme";
 
@@ -39,8 +40,7 @@ import "./styles/adminsidebar.css";
 import "./styles/teachertopbar.css";
 import "./styles/admintopbar.css";
 import "./styles/subjectpage.css";
-import "./styles/manageQuestions.css";
-
+import "./styles/manageQuestions.css"; 
 import "./styles/ManageSubject.css";
 import "./styles/layout.css";
 import "./styles/adminlayout.css";
